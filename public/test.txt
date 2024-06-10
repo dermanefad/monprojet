@@ -1,0 +1,35 @@
+DB::table('users')->insert([
+    'nom' => 'DERMANE',
+    'prenom' => 'fad',
+    'email' => 'dermanefad@email.com',
+    'contact' => '90148882',
+    'status' => 'admin',
+    'password'=> '123456789'
+    
+]);
+
+
+
+DB::table('evenements')->insert([
+    'nom' => 'ifnti',
+    'pays' => 'togo',
+    'ville' => 'sokode',
+    'adresse' => '90148882',
+    'gps' => 'mm05',
+    'description'=> 'cours laravel11',
+    'date'=>'12/21/1992',
+    'heur_debut'=>'12h30',
+    'heur_fin' =>'17h30',
+    'entreprises_id'=>1
+]);
+
+
+DB::table('entreprises')->insert([
+    'nom' => 'ifnti',
+    'pays' => 'togo',
+    'ville' => 'sokode',
+    'quartier' => 'komah',
+    'adresse' => '90418882',
+    'user_id'=> 1
+    
+]);

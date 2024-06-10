@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -9,6 +10,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return "Welcome on my page ...";
+});
+
+Route::get('/users', function () {
+    
+    $us=DB::table('users')->get()->first();
+    $us=DB::table('users')->first();
+    dump($us);
+     return "Liste des utilisateurs : ";
+});
+
+Route::get('/entreprises', function () {
+    return DB::table('entreprises')->get();
 });
 
 // Route::get('/etudient', function (Request $request) {
