@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('heur_debut');
             $table->string('heur_fin');
             $table->integer('entreprises_id');
+            $table->foreignId('entreprises_id')->constrained('entreprises')->onDelete('cascade');
             $table->foreign('entreprises_id')->references('id')->on('entreprises');
             $table->timestamps();
         });
