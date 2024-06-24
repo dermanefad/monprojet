@@ -14,29 +14,48 @@
             @csrf
             <div class="mb-3">
                 <label for="nom" class="form-label">Nom</label>
-                <input type="text" class="form-control" id="nom" name="nom" required>
+                <input type="text" class="form-control" id="nom" name="nom" value="{{old('nom')}}">
+                @error('nom')
+                    <span style="color:red">Champ obliger</span>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="pays" class="form-label">Pays</label>
-                <input type="text" class="form-control" id="pays" name="pays" required>
+                <input type="text" class="form-control" id="pays" name="pays">
+                @error('pays')
+                    <span style="color:red">Champ obliger</span>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="ville" class="form-label">Ville</label>
-                <input type="text" class="form-control" id="ville" name="ville" required>
+                <input type="text" class="form-control" id="ville" name="ville" >
+                @error('ville')
+                    <span style="color:red">Champ obliger</span>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="quartier" class="form-label">Quartier</label>
-                <input type="text" class="form-control" id="quartier" name="quartier" required>
+                <input type="text" class="form-control" id="quartier" name="quartier" >
+                @error('quartier')
+                    <span style="color:red">Champ obliger</span>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="adresse" class="form-label">Adresse</label>
-                <input type="text" class="form-control" id="adresse" name="adresse" required>
+                <input type="text" class="form-control" id="adresse" name="adresse" >
+                @error('adresse')
+                    <span style="color:red">Champ obliger</span>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="user_id" class="form-label">Utilisateur</label>
-                <input type="number" class="form-control" id="user_id" name="user_id" required>
+                <input type="number" class="form-control" id="user_id" name="user_id" >
+                @error('user_id')
+                    <span style="color:red">Champ obliger</span>
+                @enderror
             </div>
             <button type="submit" class="btn btn-primary">Sauvegarder</button>
+            <a href="{{ route('entreprises.index') }}" class="btn btn-secondary">Retour</a>
         </form>
     </div>
 </body>

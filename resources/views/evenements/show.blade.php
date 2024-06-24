@@ -21,6 +21,7 @@
         <p><strong>Heure de Fin:</strong> {{ $evenement->heur_fin }}</p>
         <p><strong>Entreprise ID:</strong> {{ $evenement->entreprises_id }}</p>
         <a href="{{ route('evenements.index') }}" class="btn btn-primary">Retour à la liste</a>
+        <a href="{{ route('evenements.downloadPdf', $evenement->id) }}" class="btn btn-secondary">Télécharger en PDF</a>
     </div>
 </body>
 </html>

@@ -13,7 +13,7 @@
         <p><strong>ID :</strong> {{ $commande->id }}</p>
         <p><strong>Date :</strong> {{ $commande->date }}</p>
         <p><strong>Utilisateur :</strong> {{ $commande->user->nom }} {{ $commande->user->prenom }}</p>
-        <!-- Ajoutez d'autres détails de la commande si nécessaire -->
+        
         <a href="{{ route('commandes.index') }}" class="btn btn-primary">Retour</a>
         <a href="{{ route('commandes.downloadPDF', $commande->id) }}" class="btn btn-secondary">Télécharger en PDF</a>
     </div>

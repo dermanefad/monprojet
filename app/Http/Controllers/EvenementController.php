@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Evenement;
 use Illuminate\Http\Request;
+use PDF;
+
 
 class EvenementController extends Controller
 {
@@ -74,5 +76,13 @@ class EvenementController extends Controller
         $evenement->delete();
 
         return redirect()->route('evenements.index')->with('success', 'Événement supprimé avec succès');
+    }
+
+    public function downloadPdf($id)
+    {
+        $evenement = Evenement::findOrFail($id);
+
+        $pdf = PDF::loadView('evenements.pdf', compact('evenement'));
+        return $pdf->download('evenement.pdf');
     }
 }

@@ -103,8 +103,9 @@ class EntrepriseController extends Controller
         $entreprise->delete();
         return redirect()->route('entreprises.index')->with('success', 'Entreprise supprimée avec succès');
     }
-    public function downloadPdf(Entreprise $entreprise)
+    public function downloadPdf($id)
     { 
+        $entreprise = Entreprise::findOrFail($id);
         $pdf = PDF::loadView('entreprises.pdf', compact('entreprise'));
         return $pdf->download('entreprise.pdf');
     }

@@ -14,10 +14,10 @@
             <li><a href={{route('contact')}}> Contact </a></li>
         </ul>
     </nav>
-    <h1 style="margin-top: 12px;color:blue">Page: Welcome</h1>
-    <a href="{{ route('commandes.index') }}" class="btn btn-sm btn-info">commande</a>
-    <a href="{{ route('ligne_commandes.index') }}" class="btn btn-sm btn-info">ligne_commandes</a>
-    <a href="{{ route('tickets.index') }}" class="btn btn-sm btn-info">ticker</a>
+   <main>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quis iste necessitatibus quam qui veritatis, dolores veniam? Commodi numquam quo perspiciatis accusantium? Nam quam sed fuga excepturi vero, et culpa!</p>
+   </main>
+    
 
      
 </body>

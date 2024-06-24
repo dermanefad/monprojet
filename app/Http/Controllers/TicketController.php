@@ -84,6 +84,7 @@ class TicketController extends Controller
 
     public function downloadPdf(Ticket $ticket)
     {
+        dump($ticket);
         $pdf = PDF::loadView('tickets.pdf', compact('ticket'));
         return $pdf->download('ticket-details.pdf');
     }
