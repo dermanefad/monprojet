@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Entreprise PDF</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
     <h1>{{ $entreprise->nom }}</h1>
